@@ -6,11 +6,11 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const logger = log4js.getLogger();
 	logger.level = "debug"; // default level is OFF - which means no logs at all.
-	logger.debug("Some debug messages");
+	logger.debug("This will end up in the debug console");
 	ZoweVsCodeExtension.updateCredentials({}, ZoweVsCodeExtension.getZoweExplorerApi(
 		'2.0.0-SNAPSHOT'
 	));
-	logger.debug("This will end up in the Zowe Explorer log");
+	logger.debug("This will end up in the imperative log");
 
 }
 
